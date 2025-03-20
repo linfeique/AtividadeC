@@ -19,11 +19,11 @@ public:
 
     void definirAngulo(double angulo);
     double seno() const;
-    double cosseno();
-    double tangente();
-    double cotangente();
-    double secante();
-    double cossecante();
+    double cosseno() const;
+    double tangente() const;
+    double cotangente() const;
+    double secante() const;
+    double cossecante() const;
 
     Trigonometria operator+(const Trigonometria &trigonometria);
     Trigonometria operator-(const Trigonometria &trigonometria);

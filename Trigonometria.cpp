@@ -17,16 +17,25 @@ void Trigonometria::definirAngulo(const double angulo) {
 }
 
 double Trigonometria::seno() const {
-    // estarei fazendo o uso das Séries de Taylor para realizar o calculo do seno
-
-    double seno = 0.0;
-    double termo = anguloEmGraus;
-
-    for (int i = 1; i <= 10; i++ ) {
-        seno += termo;
-        termo *= -(anguloEmGraus * anguloEmGraus / (2 * i * (2 * i + 1)));
-    }
-
-    return seno;
+    return sin(anguloEmRadianos);
 }
 
+double Trigonometria::cosseno() const {
+    return cos(anguloEmRadianos);
+}
+
+double Trigonometria::tangente() const {
+    return seno() / cosseno();
+}
+
+double Trigonometria::cotangente() const {
+    return 1 / tangente();
+}
+
+double Trigonometria::secante() const {
+    return 1 / cosseno();
+}
+
+double Trigonometria::cossecante() const {
+    return 1 / seno();
+}
