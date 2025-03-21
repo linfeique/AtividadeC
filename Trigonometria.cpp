@@ -39,3 +39,17 @@ double Trigonometria::secante() const {
 double Trigonometria::cossecante() const {
     return 1 / seno();
 }
+
+Trigonometria Trigonometria::operator+(const Trigonometria &trigonometria) const {
+    const double novoSeno = this->seno() * trigonometria.cosseno() + this->cosseno() * trigonometria.seno();
+    const double novoCosseno = this->cosseno() * trigonometria.cosseno() - this->seno() * trigonometria.seno();
+
+    return Trigonometria(atan2(novoSeno, novoCosseno) * 180.0 / M_PI);
+}
+
+Trigonometria Trigonometria::operator-(const Trigonometria &trigonometria) const {
+    const double novoSeno = this->seno() * trigonometria.cosseno() - this->cosseno() * trigonometria.seno();
+    const double novoCosseno = this->cosseno() * trigonometria.cosseno() + this->seno() * trigonometria.seno();
+
+    return Trigonometria(atan2(novoSeno, novoCosseno) * 180.0 / M_PI);
+}

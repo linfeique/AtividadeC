@@ -25,8 +25,8 @@ public:
     double secante() const;
     double cossecante() const;
 
-    Trigonometria operator+(const Trigonometria &trigonometria);
-    Trigonometria operator-(const Trigonometria &trigonometria);
+    Trigonometria operator+(const Trigonometria &trigonometria) const;
+    Trigonometria operator-(const Trigonometria &trigonometria) const;
 
     friend ostream& operator<<(ostream& os, const Trigonometria& trigonometria);
 };
