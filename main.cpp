@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Trigonometria.h"
+#include "Trigonometria/Trigonometria.hpp"
 
 void testesTrigonometria() {
     const Trigonometria trigonometria(45);

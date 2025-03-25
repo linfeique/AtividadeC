@@ -5,7 +5,6 @@
 #ifndef TRIGONOMETRIA_H
 #define TRIGONOMETRIA_H
 #include <ostream>
-#include <optional>
 using namespace std;
 
 class Trigonometria {
@@ -13,6 +12,7 @@ private:
     double anguloEmGraus;
     double anguloEmRadianos;
 
+    static int calcularFatorial(int numero);
 public:
     // Usando o explicit aqui para evitar conversão de dado implícita
     explicit Trigonometria(double angulo);

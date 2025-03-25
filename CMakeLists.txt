@@ -4,6 +4,8 @@ project(atividade2)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(atividade2 main.cpp
-        Trigonometria.cpp
-        Trigonometria.h
+        Trigonometria/Trigonometria.cpp
+        Trigonometria/Trigonometria.hpp
+        Vetores/Vetores.cpp
+        Vetores/Vetores.hpp
 )
